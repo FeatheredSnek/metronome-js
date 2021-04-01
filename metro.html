@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+<link href="metro.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="superdiv">
+
+  <div class="controls-container">
+
+    <div class="bpm-container">
+      <div class="bpm-inputcontainer">
+        <input class="bpm-input" id="bpm-input" value="60" maxlength = "3" type="tel" min="20" max="220" />
+        <div class="bpm-label">bpm</div>
+      </div>
+      <input class="slider" id="bpm-slider" type="range" min="20" max="220" value="60" />
+    </div>
+
+    <div class="values-container">
+      <div class="note-value nv-selected" id="meter-0">
+        <p>-</p>
+        <p>-</p>
+      </div>
+      <div class="note-value" id="meter-2">
+        <p>2</p>
+        <p>4</p>
+      </div>
+      <div class="note-value" id="meter-3">
+        <p>3</p>
+        <p>4</p>
+      </div>
+      <div class="note-value" id="meter-4">
+        <p>4</p>
+        <p>4</p>
+      </div>
+    </div>
+
+    <div class="bars-container">
+      <div class="bars-inputcontainer">
+        <input class="bars-input" id="bars-input" value="0" min="0" max="16" maxlength="2" type="tel" />
+        <svg class="bars-img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.636 43.664">
+        <g>
+        	<rect width="97.636" height="1.221"/>
+        	<rect y="10.611" width="97.636" height="1.221"/>
+        	<rect y="21.221" width="97.636" height="1.223"/>
+        	<rect y="31.832" width="97.636" height="1.222"/>
+        	<rect y="42.443" width="97.636" height="1.221"/>
+        	<polygon points="81.833,10.611 81.833,17.711 15.802,17.711 15.802,10.611 13.665,10.611 13.665,32.443
+        		15.802,32.443 15.802,25.344 81.833,25.344 81.833,32.443 83.972,32.443 83.972,25.344 83.972,17.711 83.972,10.611 	"/>
+        </g>
+        </svg>
+      </div>
+      <input class="slider" id="bars-slider" type="range" min="0" max="16" value="0" />
+    </div>
+  </div>
+
+  <div class="play-container">
+    <div id="play-button">
+
+    <!-- SVG MADNESS -->
+    <svg id="play-icon"
+       version="1.1"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="-30 -30 345 345"
+       enable-background="true">
+      <path id="tri"
+        d="M43.52,0c0-5.268,185.667,108.565,239.899,141.732 c0.061,0.037,0.061,0.247,0,0.284C226.954,176.397,43.52,288.302,43.52,283.464C43.52,212.598,43.523,46.732,43.52,0z">
+      <animate id="aniTriIntoSquare"
+           begin="kok.click"
+           dur="0.5s"
+           repeatCount="1"
+           attributeName="d"
+           values="M43.52,0c0-5.268,185.667,108.565,239.899,141.732 c0.061,0.037,0.061,0.247,0,0.284C226.954,176.397,43.52,288.302,43.52,283.464C43.52,212.598,43.523,46.732,43.52,0z;
+                   M43.145,42.49c57.543-57.542,141.507-55.756,197.264,0 c64.838,64.837,48.351,148.914,0,197.263c-56.923,56.922-142.274,54.988-197.264,0C-15.02,181.589-12.465,98.099,43.145,42.49z;
+                   M0,0c0-0.268,228.232,0,283.465,0 c0.061,0.037,0.067,283.579,0.007,283.616c-51.489,0-229.489,0-282.998,0C0,283.617,0.004,46.732,0,0z"
+           fill="freeze"
+           calcMode="spline"
+           keySplines="0 0 0 0; 0.165, 0.84, 0.44, 1"
+           />
+        <animate id="aniSquareIntoTri"
+           begin="kok.click"
+           dur="0.5s"
+           repeatCount="1"
+           attributeName="d"
+           values="M0,0c0-0.268,228.232,0,283.465,0 c0.061,0.037,0.067,283.579,0.007,283.616c-51.489,0-229.489,0-282.998,0C0,283.617,0.004,46.732,0,0z;
+                   M43.145,42.49c57.543-57.542,141.507-55.756,197.264,0 c64.838,64.837,48.351,148.914,0,197.263c-56.923,56.922-142.274,54.988-197.264,0C-15.02,181.589-12.465,98.099,43.145,42.49z;
+                   M43.52,0c0-5.268,185.667,108.565,239.899,141.732 c0.061,0.037,0.061,0.247,0,0.284C226.954,176.397,43.52,288.302,43.52,283.464C43.52,212.598,43.523,46.732,43.52,0z;"
+           fill="freeze"
+           calcMode="spline"
+           keySplines="0 0 0 0; 0.165, 0.84, 0.44, 1"
+           />
+        <animateTransform id="aniRotation-0-180"
+                    attributeName="transform"
+                    begin="kok.click"
+                    type="rotate"
+                    from="0 141.749 141.749"
+                    to="180 141.749 141.749"
+                    dur="0.5s"
+                    repeatCount="1"
+                    calcMode="spline"
+                    keySplines="0.4, 0, 0.2, 1"
+                    />
+        <animateTransform id="aniRotation-180-360"
+                    attributeName="transform"
+                    begin="kok.click"
+                    type="rotate"
+                    from="180 141.749 141.749"
+                    to="360 141.749 141.749"
+                    dur="0.5s"
+                    repeatCount="1"
+                    calcMode="spline"
+                    keySplines="0.4, 0, 0.2, 1"
+                    />
+      </path>
+    </svg>
+    <!-- SVG MADNESS -->
+
+    </div>
+
+    <div class="metro-container">
+      <div class="metro-hr"></div>
+      <div class="metro-balls-container">
+        <div class="ball-1-container">
+          <div class="ball ball-1-start" id="metro-ball-1"></div>
+        </div>
+        <div class="ball-2-container">
+          <div class="ball ball-2-start" id="metro-ball-2"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="metro.js"></script>
+</body>
+</html>

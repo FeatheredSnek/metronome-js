@@ -1,0 +1,271 @@
+p {
+  font-size: 1em;
+  margin:0;
+  color: #696969;
+}
+
+body {
+  color: #696969;
+  background: #d4d4f7 ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.superdiv {
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  width: 360px
+}
+
+input {
+  color: #696969;
+  display: block;
+  border-radius: 32px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.controls-container {
+  padding: 40px 0;
+  height: 100%;
+  min-height: 460px;
+  max-height: 560px;
+  background: white;
+  width: 360px;
+  margin: 1em auto 2em auto;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center
+}
+
+.bpm-container {
+  min-height: 180px;
+  width: 72%;
+}
+
+.bpm-inputcontainer {
+  width: 100%;
+  height: 140px;
+  border: solid 1px #d4d4f7 ;
+  border-radius: 32px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bpm-input {
+  background: none;
+  width: 100%;
+  font-size: 5.2em;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bpm-label {
+  cursor: default;
+  font-size: 1.2em;
+}
+
+.slider {
+  margin-top: 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 98%;
+  height: 2px;
+  border-radius: 5px;
+  background: #d4d4f7 ;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: #d4d4f7 ;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: #d4d4f7 ;
+  cursor: pointer;
+}
+
+.values-container {
+  width: 72%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.note-value {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #d4d4f7 ;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' %3E%3Ccircle fill='%23d4d4f7 ' cx='50' cy='50' r='50'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0%;
+  border-radius: 50%;
+  transition: background-size 0.5s;
+}
+
+.note-value > * {
+  color: #696969;
+  transition: color 0.5s;
+}
+
+/* .note-value:hover {
+  background-size: 100%;
+} */
+
+.nv-selected {
+  background-size: 100%;
+}
+
+.nv-selected > * {
+  color: white; !important;
+}
+
+.bars-container {
+  min-height: 170px;
+  width: 72%;
+
+}
+
+.bars-inputcontainer {
+  padding: 8px 0 16px 0;
+  border: solid 1px #d4d4f7 ;
+  border-radius: 32px;
+}
+
+.bars-input {
+  border: none;
+  margin: auto;
+  width:50%;
+  font-size: 2.5em;
+  margin-bottom:6px
+}
+
+.bars-img {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 50px;
+}
+
+.play-container {
+  height: 120px;
+  width: 100%;
+}
+
+#play-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  background: white;
+}
+
+#play-icon {
+  width:80px;
+  heght:80px;
+}
+
+.metro-container {
+  z-index: 1;
+  position: relative;
+  top: -62px;
+  width: 100%;
+}
+
+.metro-hr {
+  margin: auto;
+  width: 320px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+}
+
+.ball-1-container {
+  position: relative;
+  top: -20px;
+  height: 36px;
+  float: left;
+  width: 156px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 48px;
+}
+
+.ball-2-container {
+  position: relative;
+  top: -20px;
+  height: 36px;
+  float: left;
+  width: 156px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ball {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+
+}
+
+.ball-1-start {
+  right: 0px;
+  width: 36px;
+  height: 36px;
+}
+
+.ball-2-start {
+  left: 0px;
+  width: 36px;
+  height: 36px;
+}
+
+.ball-1-end {
+  right: 160px;
+  width: 2px;
+  height: 2px;
+}
+
+.ball-2-end {
+  left: 160px;
+  width: 2px;
+  height: 2px;
+}
+
+g > * {
+  fill: #696969;
+}
+
+#tri {
+  fill: #d4d4f7 ;
+}
